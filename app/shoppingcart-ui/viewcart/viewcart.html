@@ -1,0 +1,136 @@
+<!-- 
+Purpose: Shopping Cart view. 
+Will allow the user to view a list of all shopping cart
+items. 
+
+Separate of concerns/SRP
+- This view is only responsible for listing shopping cart items. 
+
+1. ng repeat of vm.cartitems from localstorage
+
+-->
+
+<!--Main layout-->
+<main class="">
+
+    <div class="container-fluid">
+
+        <!-- First row -->
+        <div class="row white z-depth-1 mb-r" ng-show="vm.cartitems.length > 0">
+
+            <!-- Navigation -->
+            <div class="col-md-6">
+                <h4 class="h4-responsive mt-1">Shopping Cart</h4>
+            </div>
+
+            <div class="col-md-6 text-md-right">
+                
+                <a href="#" ui-sref="checkout" class="btn btn-secondary">Checkout</a>
+            </div>
+            <!-- /.Navigation -->
+
+        </div>
+        <!-- /.First row -->
+
+        <section class="invoice row mb-r" ng-hide="vm.cartitems.length > 0">
+
+            <div class="col-md-12">
+                No items in your cart.
+            </div>
+        </section>
+
+        <section class="invoice row mb-r" ng-show="vm.cartitems.length > 0">
+
+            <div class="col-md-12">
+
+               
+                <!-- ./First row -->
+
+                <!-- Second row -->
+                <div class="row mt-2" >
+                    <div class="col-md-12">
+                        
+                        <!-- Item list -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in vm.cartitems">
+                                    <td>
+                                        <p>
+                                            {{ item.title }} ({{item.id}}) qty: {{item.quantity}}
+                                        </p> 
+                                        <p>
+                                            <button class="btn" ng-click="vm.removeItem(item);"> Delete</button> 
+                                        </p>
+                                     </td>
+                                    <td>
+                                        {{item.quantity}}
+                                        <select style="display:block" ng-change="vm.updateQuantity(item);" ng-model="vm.quantity[item.id]">
+                                             
+                                            <!-- <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7" ng-selected="vm.quantity[item.id] == 7">7</option>  -->
+                                           <option data-ng-repeat="n in [1,2,3,4,5,6,7,8,9]" value="{{n}}" ng-selected="n === item.quantity">
+                                                {{n}}
+                                            </option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        ${{ item.price | number:2 }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- /.Item list -->
+
+                    </div>
+                </div>
+                <!-- /.Second row -->
+
+                <!-- Third row -->
+                <div class="row mt-2">
+                    <div class="col-md-2 float-md-right">
+                        <ul class="striped">
+                            <li><strong>Total:</strong><span class="float-xs-right">${{ vm.total | number:2 }}</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.Third row -->
+            </div>
+
+        </section>
+
+        <div class="row white z-depth-1 mb-r" ng-show="vm.cartitems.length > 0">
+
+            <!-- Navigation -->
+            <div class="col-md-6">
+                
+                <a ng-click="vm.clearCart()" class="btn btn-secondary">Empty Cart</a>
+            </div>
+
+            <div class="col-md-6 text-md-right">
+                
+                <a href="#" ui-sref="checkout" class="btn btn-secondary">Checkout</a>
+            </div>
+            <!-- /.Navigation -->
+
+        </div>
+    </div>
+
+</main>
+<!--/Main layout-->
+
+   
+
+
+

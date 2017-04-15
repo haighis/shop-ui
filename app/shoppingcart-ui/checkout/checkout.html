@@ -1,0 +1,115 @@
+<!-- 
+Purpose: Checkout view. 
+Will allow the user to view order before placing an order.
+items. 
+
+Separate of concerns/SRP
+- This view is only responsible for placing an order.
+
+1. ng repeat of vm.cartitems from localstorage
+
+-->
+
+<!--Main layout-->
+<main class="">
+
+    <div class="container-fluid">
+
+        <!-- First row -->
+        <div class="row white z-depth-1 mb-r" ng-show="vm.cartitems.length > 0">
+
+            <!-- Navigation -->
+            <div class="col-md-6">
+                <h4 class="h4-responsive mt-1">Confirm Order before placing Order</h4>
+            </div>
+
+            <div class="col-md-6 text-md-right">
+                
+                
+            </div>
+            <!-- /.Navigation -->
+
+        </div>
+        <!-- /.First row -->
+
+        <section class="invoice row mb-r" ng-hide="vm.cartitems.length > 0">
+
+            <div class="col-md-12">
+                No items in your cart.
+            </div>
+        </section>
+
+        <section class="invoice row mb-r" ng-show="vm.cartitems.length > 0">
+
+            <div class="col-md-12">
+
+               
+                <!-- ./First row -->
+
+                <!-- Second row -->
+                <div class="row mt-2" >
+                    <div class="col-md-12">
+                        
+                        <!-- Item list -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in vm.cartitems">
+                                    <td>
+                                        <p>
+                                            {{ item.title }} ({{item.id}})
+                                        </p> 
+                                     </td>
+                                    <td>
+                                        {{item.quantity}}
+                                    </td>
+                                    <td>
+                                        ${{ item.price | number:2 }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- /.Item list -->
+
+                    </div>
+                </div>
+                <!-- /.Second row -->
+
+                <!-- Third row -->
+                <div class="row mt-2">
+                    <div class="col-md-2 float-md-right">
+                        <ul class="striped">
+                            <li><strong>Total:</strong><span class="float-xs-right">${{ vm.total | number:2 }}</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.Third row -->
+            </div>
+
+        </section>
+
+        <div class="row white z-depth-1 mb-r" ng-show="vm.cartitems.length > 0">
+
+            <!-- Navigation -->
+            <div class="col-md-6">
+                
+                <a ui-sref="viewcart" class="btn btn-secondary">Review Cart</a>
+            </div>
+
+            <div class="col-md-6 text-md-right">
+                
+                <button ng-click="vm.submitOrder();" ng-disabled="vm.isSubmitted" class="btn btn-secondary">I confirm & Place Order</button>
+            </div>
+            <!-- /.Navigation -->
+
+        </div>
+    </div>
+
+</main>
+<!--/Main layout-->

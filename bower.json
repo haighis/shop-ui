@@ -1,0 +1,15 @@
+{
+  "name": "shop-ui",
+  "description": "An angular frontend for Shopping with karma, e2e-tests testing.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/haighis/shop-ui",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "html5-boilerplate": "^5.3.0"
+  }
+}

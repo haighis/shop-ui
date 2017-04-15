@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" ng-app="shopApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shop</title>
+    <meta name="description" content="">
+    <meta name="google" value="notranslate">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="bower_components/mdb/css/bootstrap.css">
+
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="bower_components/mdb/css/mdb.css">
+    
+    <link rel="stylesheet" href="bower_components/mdb/css/style.css">
+
+</head>
+<body class="fixed-sn elegant-white-skin">
+     
+    <!-- Top Navigation Bar -->    
+    <div ui-view="navbar"></div>
+    
+    <!-- Main Content View -->    
+    <div ui-view="content"></div>
+
+    <script src="bower_components/json3/lib/json3.js"></script> 
+    <script src="bower_components/lodash/lodash.js"></script> 
+    <script src="bower_components/angular/angular.js"></script> 
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> 
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script> 
+    <script src="bower_components/ngstorage/ngStorage.js"></script> 
+    <script src="bower_components/angular-resource/angular-resource.js"></script> 
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script> 
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script> 
+    
+    <!-- main ng module for shopApp -->
+    <script src="app.module.js"></script>
+    <script src="app.state.js"></script>
+    <script src="app.constants.js"></script>
+
+    <!-- navbar -->
+    <script src="layouts/navbar/navbar.controller.js"></script>
+    
+    <script src="layouts/error/error.state.js"></script>
+    <script src="components/util/promise.service.js"></script>
+    <script src="blocks/config/localstorage.config.js"></script>
+    <script src="blocks/config/http.config.js"></script>
+    <script src="blocks/interceptor/errorHandler.interceptor.js"></script>
+    <script src="blocks/config/compile.config.js"></script>
+    
+    <!-- Category & Product -->
+    <script src="product-ui/product-ui.module.js"></script>
+    <script src="product-ui/services/product.service.js"></script>
+    <script src="product-ui/category/category.state.js"></script>
+    <script src="product-ui/category/category.controller.js"></script>
+    <script src="product-ui/productlisting/productlisting.state.js"></script>
+    <script src="product-ui/productlisting/productlisting.controller.js"></script>
+    
+    <!-- Shopping Cart -->
+    <script src="shoppingcart-ui/shoppingcart-ui.module.js"></script>
+    <script src="shoppingcart-ui/services/shoppingcart.service.js"></script>
+    <script src="shoppingcart-ui/viewcart/viewcart.state.js"></script>
+    <script src="shoppingcart-ui/viewcart/viewcart.controller.js"></script>
+    <script src="shoppingcart-ui/checkout/checkout.state.js"></script>
+    <script src="shoppingcart-ui/checkout/checkout.controller.js"></script>
+
+    <!-- Order -->
+    <script src="order-ui/order-ui.module.js"></script>
+    <script src="order-ui/services/order.service.js"></script>
+    <script src="order-ui/confirmation/confirmation.state.js"></script>
+    <script src="order-ui/confirmation/confirmation.controller.js"></script>
+
+    <!-- MDB bootstrap SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="bower_components/mdb/js/jquery-3.1.1.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="bower_components/mdb/js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="bower_components/mdb/js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="bower_components/mdb/js/mdb.min.js"></script>
+    
+</body>
+</html>
