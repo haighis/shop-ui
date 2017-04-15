@@ -8,18 +8,20 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      
+      'bower_components/ngstorage/ngStorage.js',
       'app.module.js',
       'app.state.js',
-      // 'components/**/*.js',
+      'components/util/promise.service.js',
       'product-ui/product-ui.module.js',
       'product-ui/**/*.js',
-      'product-ui/services/product.service.js'
+      'product-ui/services/product.service.js',
       
-      // 'shoppingcart-ui/shoppingcart-ui.module.js',
+      'shoppingcart-ui/shoppingcart-ui.module.js',
+      'shoppingcart-ui/services/shoppingcart.service.js',
       // 'shoppingcart-ui/**/*.js',
-      // 'order-ui/order-ui.module.js',
-      // 'order-ui/**/*.js',
+      //'',
+      'order-ui/order-ui.module.js',
+      'order-ui/**/*.js',
       //'view*/**/*.js'
     ],
 

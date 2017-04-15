@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-  angular.module('shopApp').factory('promiseService', promiseService);
+  angular.module('promiseland',[]).factory('promiseService', promiseService);
         
   function promiseService($q) {
     return {

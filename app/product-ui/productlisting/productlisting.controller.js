@@ -33,7 +33,7 @@
                 // TODO if we have time then implement paging
             };
 
-            ProductBackendService.getProducts(model).then(function(results){
+            ProductBackendService.getProductsByCategory(model).then(function(results){
                 vm.products = results;
             })
         }

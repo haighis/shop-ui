@@ -2,7 +2,8 @@
 
 // describe('Product.UI module', function() {
 
-//   beforeEach(module('ui.router'));
+//   //beforeEach(module('ui.router'));
+//   beforeEach(module('Product.UI.State'));
 //   beforeEach(module('Product.UI'));
   
 //   var $controller, $scope, $rootScope, $controller, $state, $q;
