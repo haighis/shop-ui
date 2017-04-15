@@ -1,4 +1,5 @@
 /*
+  Product Service Jasmine Test
   - As an example let's change the name of a method in the product backend service 
   - Rerun the tests and then see if the test fails
   - Change the method name in the test and rerun the test, and the test will pass

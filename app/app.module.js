@@ -4,7 +4,6 @@
     angular
         .module('shopApp', [
             'ngStorage', 
-            //'ngResource',
             'ui.bootstrap',
             'ui.router',
          
