@@ -3,6 +3,9 @@
   /*
     Shop App e2e tests
     Tests that browse the frontend angular states 
+
+    https://github.com/hanthomas/protractor-recorder
+    http://blog.scottlogic.com/2015/11/06/ProtractorForBeginnersPart1.html
   */
   
   describe('shop app e2e test', function() {
