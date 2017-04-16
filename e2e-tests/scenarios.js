@@ -24,17 +24,17 @@
   // });
 
   // Category
-  describe('category', function() {
+  // describe('category', function() {
 
-    beforeEach(function() {
-      browser.driver.get(url);
-      browser.driver.manage().window().setSize(1439, 873);
-      element(by.css('nav>div:nth-of-type(1)>a>i')).click();
-    });
+  //   beforeEach(function() {
+  //     browser.driver.get(url);
+  //     browser.driver.manage().window().setSize(1439, 873);
+  //     element(by.css('nav>div:nth-of-type(1)>a>i')).click();
+  //   });
 
-    //expect( element(by.css('select[ng-model="vm.quantity[product.id]"]')).isPresent() ).toBe(true);
+  //   //expect( element(by.css('select[ng-model="vm.quantity[product.id]"]')).isPresent() ).toBe(true);
 
-  });
+  // });
 
   // Product Listing 
   // describe('category', function() {
