@@ -7,11 +7,18 @@ npm start
 
 ```
 
-# Tests
+Open your browser to http://localhost:2005
+
+# Jasmine Tests
 
 ```
 npm test
 
 ```
 
-Open your browser to http://localhost:2005
+# e2e Tests with Protractor
+
+```
+npm run protractor
+
+```
