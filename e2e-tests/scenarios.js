@@ -17,7 +17,7 @@
     expect(browser.getLocationAbsUrl()).toMatch("/category");
   });
 
-  // Example of faing e2e test
+  // Example of failng e2e test
   // it('should fail to show that protractor is working and sometimes I fail', function() {
   //   browser.get(url);
   //   expect(browser.getLocationAbsUrl()).toMatch("/categorytest");
